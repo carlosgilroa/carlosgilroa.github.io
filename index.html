@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlos Gil | Senior Data Engineer & AI-Native Systems Builder</title>
+  <meta name="description" content="Senior Data Engineer & AI Systems Builder with 5+ years of experience in LookML, BigQuery, Microsoft Fabric, Spark, and Agentic RAG microservices.">
+  <meta name="keywords" content="Data Engineer, Looker, LookML, AI Engineer, BigQuery, Microsoft Fabric, Apache Spark, Python, RAG, FastAPI">
+  <meta name="author" content="Carlos Gil Roa">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Carlos Gil | Senior Data Engineer & AI Systems Builder">
+  <meta property="og:description" content="5+ years bridging cloud data platforms (Microsoft Fabric, BigQuery, LookML) with modern AI systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://quiquecg.github.io">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+            },
+            accent: {
+              500: '#6366f1',
+              600: '#4f46e5',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    .glass {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-light {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    .gradient-border {
+      position: relative;
+      border-radius: 1rem;
+      background: linear-gradient(135deg, rgba(45, 212, 191, 0.25), rgba(99, 102, 241, 0.25), transparent);
+      padding: 1px;
+    }
+    .gradient-border-inner {
+      border-radius: calc(1rem - 1px);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-100 font-sans transition-colors duration-300 antialiased selection:bg-brand-500 selection:text-slate-950">
+
+  <!-- NAVIGATION -->
+  <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-400 to-accent-600 flex items-center justify-center font-mono font-bold text-slate-950 shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+          CG
+        </div>
+        <span class="font-bold text-lg tracking-tight text-white group-hover:text-brand-400 transition-colors">
+          Carlos Gil<span class="text-brand-400">.</span>
+        </span>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-brand-400 transition-colors">About</a>
+        <a href="#projects" class="hover:text-brand-400 transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-brand-400 transition-colors">Skills</a>
+        <a href="#experience" class="hover:text-brand-400 transition-colors">Experience</a>
+        <a href="#contact" class="hover:text-brand-400 transition-colors">Contact</a>
+      </div>
+
+      <!-- Action & CV CTA -->
+      <div class="flex items-center gap-3">
+        <a href="assets/CV_Carlos_Gil_Data_Engineer.pdf" target="_blank" download class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-slate-950 font-semibold text-sm transition-all shadow-md shadow-brand-500/20 hover:shadow-brand-500/30">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>Resume / CV</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header id="about" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+    <!-- Ambient glow gradients -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-accent-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <!-- Status Pill -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400 mb-6 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Open to Senior Data & AI Engineer Roles | LATAM & Worldwide (Remote)</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight sm:leading-none mb-6">
+          Architecting <span class="bg-gradient-to-r from-brand-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent">Semantic Layers</span> & AI-Native Data Systems.
+        </h1>
+
+        <p class="text-lg sm:text-xl text-slate-300 leading-relaxed mb-8">
+          I am a <strong>Senior Data Engineer</strong> with 5+ years of experience bridging enterprise cloud data platforms (Microsoft Fabric, Google BigQuery, SQL, LookML) with production AI systems (RAG pipelines, tool-calling agents, and PySpark distributed processing).
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center gap-4 mb-12">
+          <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-brand-500 to-teal-600 hover:from-brand-400 hover:to-teal-500 text-slate-950 font-bold text-sm shadow-lg shadow-brand-500/25 transition-all">
+            <span>Explore Featured Projects</span>
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+          </a>
+          <a href="https://github.com/quiquecg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 text-slate-200 font-semibold text-sm transition-all">
+            <i data-lucide="github" class="w-4 h-4"></i>
+            <span>GitHub Profile</span>
+          </a>
+          <a href="https://www.linkedin.com/in/quiquecg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 text-slate-200 font-semibold text-sm transition-all">
+            <i data-lucide="linkedin" class="w-4 h-4 text-blue-400"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+
+        <!-- Key Metrics Highlights -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-8 border-t border-slate-850">
+          <div>
+            <div class="text-3xl font-extrabold text-white font-mono">5+ Years</div>
+            <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Enterprise Data Platforms</div>
+          </div>
+          <div>
+            <div class="text-3xl font-extrabold text-brand-400 font-mono">Zero Drift</div>
+            <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">LookML Metric Governance</div>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <div class="text-3xl font-extrabold text-indigo-400 font-mono">MSc Candidate</div>
+            <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Data Science (UniPD Italy)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURED PROJECTS SECTION -->
+  <section id="projects" class="py-20 bg-slate-900/50 border-t border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <div class="text-xs font-mono font-semibold uppercase tracking-wider text-brand-400 mb-2">Portfolio Initiatives</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Featured Engineering Projects</h2>
+        </div>
+        <p class="text-slate-400 text-sm max-w-md mt-4 md:mt-0">
+          Production-grade implementations demonstrating semantic modeling, lakehouse pipelines, and AI agent integration.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap items-center gap-2 mb-10">
+        <button class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-brand-500 text-slate-950 transition-all" data-filter="all">All Projects</button>
+        <button class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 transition-all" data-filter="semantic">Semantic Layer & BI</button>
+        <button class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 transition-all" data-filter="pipeline">Data Engineering</button>
+        <button class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 transition-all" data-filter="ai">AI & LLM Agents</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <!-- PROJECT 1: WALLET LOOKML -->
+        <div class="project-card gradient-border" data-category="semantic">
+          <div class="gradient-border-inner bg-slate-950 p-6 sm:p-8 h-full flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-4">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 border border-brand-500/20 text-xs font-mono font-semibold">
+                  <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                  LookML Semantic Layer
+                </span>
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  <i data-lucide="check-circle" class="w-3 h-3"></i>
+                  CI Passing
+                </span>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Wallet LookML Semantic Modeling Layer</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                A production-grade, Git-versioned LookML semantic modeling repository governing a multi-currency Medallion data lake on <strong>Google Cloud BigQuery</strong>.
+              </p>
+
+              <!-- Feature Highlights -->
+              <ul class="space-y-2 text-xs text-slate-300 mb-6">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Symmetric Aggregates:</strong> Declares primary keys and <code>relationship: many_to_one</code> joins to prevent SQL fanout errors mathematically.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Persistent Derived Tables (PDTs):</strong> Materialized monthly rollups with automated caching triggered by <code>datagroups</code> for sub-second query performance.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Automated CI/CD:</strong> GitHub Actions workflow validating LookML AST syntax and primary-key constraints via custom Python parser.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tech Tags & Footer Links -->
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">LookML</span>
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">Looker</span>
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">Google BigQuery</span>
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">PDTs</span>
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">GitHub Actions</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <a href="https://github.com/quiquecg/wallet-lookml" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-semibold text-xs transition-colors">
+                  <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                  <span>View Repository</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: WALLET DATA LAKEHOUSE -->
+        <div class="project-card gradient-border" data-category="pipeline">
+          <div class="gradient-border-inner bg-slate-950 p-6 sm:p-8 h-full flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-4">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-mono font-semibold">
+                  <i data-lucide="database" class="w-3.5 h-3.5"></i>
+                  Medallion Lakehouse
+                </span>
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-mono bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                  <i data-lucide="activity" class="w-3 h-3"></i>
+                  Automated ETL
+                </span>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Wallet Financial Lakehouse Automation</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Automated multi-currency financial lakehouse collecting transaction alerts via IMAP email webhooks and BudgetBakers API, standardizing data into Bronze, Silver, and Gold Parquet layers.
+              </p>
+
+              <!-- Feature Highlights -->
+              <ul class="space-y-2 text-xs text-slate-300 mb-6">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Multi-Currency Normalization:</strong> Real-time TRM FX rates (COP, EUR, USD) integration via Colombian government API (datos.gov.co).</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Local Query Engine:</strong> DuckDB engine integration querying Snappy Parquet files with analytical sub-second response times.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Two-Tier Accounting Standard:</strong> Automated ledger categorization distinguishing recurrent operational OPEX from capital sinking funds.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tech Tags & Footer Links -->
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">Python</span>
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">DuckDB</span>
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">Parquet</span>
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">Looker Studio</span>
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">REST APIs</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <a href="https://github.com/quiquecg/wallet" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-semibold text-xs transition-colors">
+                  <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                  <span>View Repository</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: AI AGENT & RAG MICROSERVICE -->
+        <div class="project-card gradient-border" data-category="ai">
+          <div class="gradient-border-inner bg-slate-950 p-6 sm:p-8 h-full flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-4">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-mono font-semibold">
+                  <i data-lucide="bot" class="w-3.5 h-3.5"></i>
+                  AI Agent & RAG
+                </span>
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-mono bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                  <i data-lucide="sparkles" class="w-3 h-3"></i>
+                  FastAPI Service
+                </span>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Semantic AI Agent & RAG Microservice</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                An AI-native backend microservice orchestrating autonomous LLM agents with vector retrieval over enterprise data dictionaries, natural-language-to-SQL translation, and tool-calling execution.
+              </p>
+
+              <!-- Feature Highlights -->
+              <ul class="space-y-2 text-xs text-slate-300 mb-6">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Vector Knowledge Base:</strong> Embeds semantic catalogs, metric formulas, and column definitions using vector search for grounding.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Tool-Calling Agent:</strong> Autonomous execution combining schema exploration, SQL generation, validation, and analytical calculations.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Production REST API:</strong> FastAPI endpoints with Pydantic contract validation, structured observability logs, and sub-second caching.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tech Tags & Footer Links -->
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">FastAPI</span>
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">LangChain</span>
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">Vector Search</span>
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">Pydantic</span>
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">Tool Calling</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-semibold text-xs transition-colors">
+                  <i data-lucide="code" class="w-3.5 h-3.5"></i>
+                  <span>Architecture Specs</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 4: BIG DATA COMPUTING (SPARK) -->
+        <div class="project-card gradient-border" data-category="pipeline">
+          <div class="gradient-border-inner bg-slate-950 p-6 sm:p-8 h-full flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-4">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-mono font-semibold">
+                  <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
+                  Distributed Computing
+                </span>
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-mono bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                  <i data-lucide="zap" class="w-3 h-3"></i>
+                  PySpark
+                </span>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Distributed Big Data Computing & PySpark</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Distributed computing algorithms and large-scale data engineering research conducted as part of the Master of Science in Data Science at the <strong>University of Padua</strong>.
+              </p>
+
+              <!-- Feature Highlights -->
+              <ul class="space-y-2 text-xs text-slate-300 mb-6">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-400 shrink-0 mt-0.5"></i>
+                  <span><strong>MapReduce & PySpark Optimization:</strong> Memory tuning, broadcast joins, partition management, and shuffling bottleneck elimination.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Process Mining Telemetry:</strong> Execution telemetry, event logs, and bottleneck detection complying with GDPR and enterprise security standards.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-brand-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Scalable Graph Analytics:</strong> Implementing parallelized graph clustering and triangle counting algorithms on massive datasets.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tech Tags & Footer Links -->
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">Apache Spark</span>
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">PySpark</span>
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">Distributed Systems</span>
+                <span class="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">MapReduce</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <a href="https://github.com/quiquecg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-semibold text-xs transition-colors">
+                  <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                  <span>View Research Code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS MATRIX -->
+  <section id="skills" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="text-xs font-mono font-semibold uppercase tracking-wider text-brand-400 mb-2">Technical Proficiency</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Core Competencies & Stack</h2>
+        <p class="text-slate-400 text-sm mt-3">An end-to-end skill matrix bridging low-level data transformation with high-level AI orchestration.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- DOMAIN 1: SEMANTIC & BI -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/40 transition-colors">
+          <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center mb-4">
+            <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">Semantic Layer & BI</h3>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed">Centralized business logic, metric governance, and sub-second reporting.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">LookML</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">Looker</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">Looker Studio</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">Power BI (DAX)</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">Dimensional Modeling</span>
+          </div>
+        </div>
+
+        <!-- DOMAIN 2: PIPELINES & WAREHOUSING -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/40 transition-colors">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4">
+            <i data-lucide="database" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">Data Pipelines & Cloud</h3>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed">Scalable ELT pipelines, medallion architectures, and high-performance querying.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">Python (Pandas, Polars)</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">Advanced SQL</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">Google BigQuery</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">Microsoft Fabric</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">DuckDB & Parquet</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">Apache Spark</span>
+          </div>
+        </div>
+
+        <!-- DOMAIN 3: AI & AGENTS -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/40 transition-colors">
+          <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">AI-Native Systems</h3>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed">Agentic workflows, retrieval-augmented generation, and LLM APIs.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">RAG Pipelines</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">Tool Calling</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">LangChain / CrewAI</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">FastAPI</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">Vector DBs (Chroma)</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">Prompt Engineering</span>
+          </div>
+        </div>
+
+        <!-- DOMAIN 4: DEVOPS & GOVERNANCE -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-brand-500/40 transition-colors">
+          <div class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center mb-4">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">DevOps & Governance</h3>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed">Continuous testing, reproducible environments, and enterprise compliance.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">GitHub Actions (CI/CD)</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">Docker</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">Git Workflows</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">GDPR & SOC 2 Telemetry</span>
+            <span class="px-2 py-1 rounded bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-850">REST & JSON APIs</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE & EDUCATION -->
+  <section id="experience" class="py-20 bg-slate-900/40 border-t border-slate-800/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="text-xs font-mono font-semibold uppercase tracking-wider text-brand-400 mb-2">Career Journey</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Experience & Academic Background</h2>
+      </div>
+
+      <div class="space-y-12">
+
+        <!-- ITEM 1: MASTER OF SCIENCE -->
+        <div class="relative pl-8 sm:pl-10 border-l-2 border-brand-500/40 group">
+          <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-950 border-2 border-brand-400 group-hover:bg-brand-400 transition-colors"></div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+            <h3 class="text-lg font-bold text-white">M.Sc. in Data Science</h3>
+            <span class="text-xs font-mono text-brand-400 bg-brand-500/10 px-2.5 py-0.5 rounded border border-brand-500/20 w-fit mt-1 sm:mt-0">2024 – Present (Ongoing)</span>
+          </div>
+          <div class="text-sm font-semibold text-slate-300 mb-3">University of Padua (Università degli Studi di Padova) • Padua, Italy</div>
+          <ul class="text-xs text-slate-400 space-y-1.5 list-disc list-inside">
+            <li>Specialization in Distributed Big Data Computing (Apache Spark / PySpark), Graph Analytics, and LLM Applications.</li>
+            <li>Conducted research in execution telemetry, process mining, and workflow optimization under enterprise compliance standards.</li>
+          </ul>
+        </div>
+
+        <!-- ITEM 2: WORLEY -->
+        <div class="relative pl-8 sm:pl-10 border-l-2 border-brand-500/40 group">
+          <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-950 border-2 border-brand-400 group-hover:bg-brand-400 transition-colors"></div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+            <h3 class="text-lg font-bold text-white">Senior Data & Analytics Engineer</h3>
+            <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-0.5 rounded w-fit mt-1 sm:mt-0">2022 – 2024</span>
+          </div>
+          <div class="text-sm font-semibold text-slate-300 mb-3">Worley (Global Energy & Engineering) • Remote / Colombia</div>
+          <ul class="text-xs text-slate-400 space-y-1.5 list-disc list-inside">
+            <li>Engineered end-to-end data pipelines in <strong>Microsoft Fabric</strong> and automated cloud warehouse ETL flows in Python and SQL.</li>
+            <li>Standardized semantic measures and enterprise Power BI reporting suites serving international engineering project directors.</li>
+            <li>Reduced reporting generation latency from days to sub-second refreshes by establishing dimensional star-schema models.</li>
+          </ul>
+        </div>
+
+        <!-- ITEM 3: BANCOLDEX -->
+        <div class="relative pl-8 sm:pl-10 border-l-2 border-brand-500/40 group">
+          <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-950 border-2 border-brand-400 group-hover:bg-brand-400 transition-colors"></div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+            <h3 class="text-lg font-bold text-white">Data Analytics & Financial Intelligence Specialist</h3>
+            <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-0.5 rounded w-fit mt-1 sm:mt-0">2020 – 2022</span>
+          </div>
+          <div class="text-sm font-semibold text-slate-300 mb-3">Bancóldex (National Development Bank) • Bogotá, Colombia</div>
+          <ul class="text-xs text-slate-400 space-y-1.5 list-disc list-inside">
+            <li>Designed SQL and Oracle ETL routines consolidating credit portfolio data, currency liquidity, and risk metrics.</li>
+            <li>Automated recurring financial reporting pipelines, eliminating 15+ weekly hours of manual reconciliation.</li>
+          </ul>
+        </div>
+
+        <!-- ITEM 4: B.SC. DEGREE -->
+        <div class="relative pl-8 sm:pl-10 border-l-2 border-slate-800 group">
+          <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-950 border-2 border-slate-600 group-hover:border-brand-400 transition-colors"></div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+            <h3 class="text-lg font-bold text-white">B.Sc. in Industrial Engineering</h3>
+            <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2.5 py-0.5 rounded w-fit mt-1 sm:mt-0">2014 – 2020</span>
+          </div>
+          <div class="text-sm font-semibold text-slate-300 mb-3">Pontificia Universidad Javeriana • Bogotá, Colombia</div>
+          <p class="text-xs text-slate-400">Graduated with focus on operations research, statistical modeling, and quantitative decision analysis.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & FOOTER -->
+  <footer id="contact" class="py-20 border-t border-slate-800 bg-slate-950 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-mono mb-6">
+        <span>Let's Build Together</span>
+      </div>
+
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-6">
+        Need a High-Impact Data & AI Engineer?
+      </h2>
+      <p class="text-slate-400 text-base max-w-xl mx-auto mb-10">
+        Available for part-time senior consultant engagements, semantic modeling contracts, or technical collaboration with US & global engineering teams.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
+        <a href="https://www.linkedin.com/in/quiquecg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-400 text-slate-950 font-bold text-sm shadow-lg shadow-brand-500/25 transition-all">
+          <i data-lucide="linkedin" class="w-4 h-4"></i>
+          <span>Connect on LinkedIn</span>
+        </a>
+        <a href="assets/CV_Carlos_Gil_Data_Engineer.pdf" target="_blank" download class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 text-white font-semibold text-sm transition-all">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>Download Resume (PDF)</span>
+        </a>
+        <a href="https://github.com/quiquecg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 text-white font-semibold text-sm transition-all">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+
+      <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+        <div>&copy; 2026 Carlos Gil Roa. Hosted on GitHub Pages.</div>
+        <div class="mt-4 sm:mt-0 font-mono text-slate-600">Built with HTML5, Tailwind CSS & Lucide Icons</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT FOR INTERACTIVE FILTERING & ICONS -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Project Category Filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Toggle active button style
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-brand-500', 'text-slate-950');
+          btn.classList.add('bg-slate-800/80', 'text-slate-300');
+        });
+        button.classList.add('bg-brand-500', 'text-slate-950');
+        button.classList.remove('bg-slate-800/80', 'text-slate-300');
+
+        const filter = button.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
